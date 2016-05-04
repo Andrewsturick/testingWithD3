@@ -1,0 +1,20 @@
+{
+  "name": "testingWithD3",
+  "description": "",
+  "main": "server.js",
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.4.0",
+    "angular-ui-router": "~0.2.18"
+  }
+}

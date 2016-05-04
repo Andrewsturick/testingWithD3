@@ -1,0 +1,36 @@
+{
+  "name": "testingWithD3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "./node_modules/karma/bin/karma start karma.conf.js",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "bower": "^1.7.9",
+    "cookie-parser": "^1.4.1",
+    "dotenv": "^2.0.0",
+    "express": "^4.13.4",
+    "gulp": "^3.9.1",
+    "gulp-add-src": "^0.2.0",
+    "gulp-bower": "0.0.13",
+    "gulp-concat": "^2.6.0",
+    "gulp-copy": "0.0.2",
+    "gulp-run": "^1.6.12",
+    "gulp-util": "^3.0.7",
+    "mongoose": "^4.4.14",
+    "morgan": "^1.7.0",
+    "rimraf": "^2.5.2"
+  },
+  "devDependencies": {
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-jasmine": "^1.0.2"
+  }
+}
