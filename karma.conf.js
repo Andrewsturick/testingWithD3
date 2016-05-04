@@ -1,4 +1,4 @@
-// Karma configuration
+e// Karma configuration
 // Generated on Tue May 03 2016 21:38:24 GMT-0700 (PDT)
 
 module.exports = function(config) {
