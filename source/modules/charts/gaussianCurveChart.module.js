@@ -1,5 +1,5 @@
-angular.module( 'gaussianCurveChart' , ['d3'] )
-       .factory( 'gaussianChart' , function (d3Service) {
-          
+angular.module( 'chartComponents.gaussianStockProbabilities' , ['d3'] )
+       .factory( 'gaussianStockProbabilities' , function (d3Service) {
+          return function(){}
 
        })

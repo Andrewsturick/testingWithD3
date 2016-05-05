@@ -1,4 +1,4 @@
-e// Karma configuration
+// Karma configuration
 // Generated on Tue May 03 2016 21:38:24 GMT-0700 (PDT)
 
 module.exports = function(config) {
@@ -18,8 +18,10 @@ module.exports = function(config) {
       'public/assets/angular/angular.min.js',
       'public/assets/angular-ui-router/release/angular-ui-router.min.js',
       'public/assets/angular-mocks/angular-mocks.js',
+
       'public/bundle.js',
-      'tests/**/**.test.js'
+      'tests/**/**.test.js',
+      '**/*.html'
 
     ],
 
@@ -32,9 +34,16 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      '**/**.html' : ['ng-html2js']
     },
 
+    ngHtml2JsPreprocessor: {
+        // If your build process changes the path to your templates,
+        // use stripPrefix and prependPrefix to adjust it.
+        prependPrefix: "public/",
 
+        // the name of the Angular module to create
+    },
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter

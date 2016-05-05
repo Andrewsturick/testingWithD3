@@ -1,42 +1,33 @@
-angular.module('optionsAnalyzer', ['ui.router'])
+angular.module('charts', ['ui.router'])
    .config(function($stateProvider, $urlRouterProvider){
 
-  $stateProvider
-    .state('home', {
-      url: '/',
-      templateUrl: 'views/home/home.html',
-      controller: 'HomeCtrl'
-    })
+   $stateProvider
+      .state('home', {
+        url: '/',
+        templateUrl: 'views/home/home.html',
+        controller: 'HomeCtrl'
+      })
 
 
     $urlRouterProvider.otherwise('/')
 })
 
-console.log(angular.module('optionsAnalyzer'))
+console.log(angular.module('charts'))
 
-angular.module('optionsAnalyzer')
-        .controller('HomeCtrl', function(){
-          console.log('testing6789');
-        })
+angular.module( 'chartComponents' , [ 'chartComponents.gaussianStockProbabilities' ] )
+.service( 'chartService' , function (gaussianStockProbabilities) {
+  return {
+    chartService :  {
+      gaussianChart :  {
+        title  : 'probability curve from a stock option chain',
+        chart  :  gaussianStockProbabilities
+      }
+    }
+  }})
 
-
-  angular.module('optionsAnalyzer')
-        .controller('mainCtrl', function(){
-          console.log('testing123');
-        })
-
-angular.module( 'chartComponents' , [ 'chartComponents.gaussian' ] )
-       .service( 'chartService' , function () {
-
-              return {
-                         chartService : gaussianChart
-                     }
-
-       })
-
-angular.module( 'gaussianCurveChart' , ['d3'] )
-       .factory( 'gaussianChart' , function (d3Service) {
-          
+angular.module( 'chartComponents.gaussianStockProbabilities' , ['d3'] )
+       .factory( 'gaussianStockProbabilities' , function (d3Service) {
+          return function(){}
 
        })
 
@@ -9600,7 +9591,8 @@ angular.module('d3', [])
               this.hello = function(){return this.d3}
             })
 
-angular.module('optionsAnalyzer')
-        .controller('HomeCtrl', function(){
+angular.module('charts')
+        .controller('HomeCtrl', function($scope){
           console.log('testing6789');
+          $scope;
         })
